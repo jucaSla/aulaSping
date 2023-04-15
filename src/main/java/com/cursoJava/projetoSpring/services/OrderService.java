@@ -13,14 +13,14 @@ import com.cursoJava.projetoSpring.repositores.OrderRepository;
 public class OrderService {
 	
 	@Autowired
-	OrderRepository OrderRepository;
+	OrderRepository orderRepository;
 	
 	public List<Order> findAll(){
-		return OrderRepository.findAll();
+		return orderRepository.findAll();
 	}
 	
 	public Order findById(Long id) {
-		Optional<Order> obj = OrderRepository.findById(id);
+		Optional<Order> obj = orderRepository.findById(id);
 		return obj.get();
 	}
 
